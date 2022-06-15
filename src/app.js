@@ -22,6 +22,15 @@ export const getPrices = (basket) => {
   for (const item of basket) {
     finalBasket += prices[item]
   }
+  //   const discounts = {
+  //     A: [3, 130]
+  //   }
+  //   finalBasket -= ()
+
+  // Now we have the total price
+  // Create an object which contains the discount
+  // Find the number of times the discount needs to be applied
+  // Remove the discount from total price
 
   return finalBasket
 }
