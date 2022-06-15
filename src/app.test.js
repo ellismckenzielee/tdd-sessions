@@ -27,6 +27,22 @@ describe("testing getPrices function", () => {
     // Assert
     expect(result).toBe(30)
   })
+  test("given item 'C', return: 20", () => {
+    // Arrange
+    const basket = ["C"]
+    // Act
+    const result = getPrices(basket)
+    // Assert
+    expect(result).toBe(20)
+  })
+  test("given item 'D', return: 15", () => {
+    // Arrange
+    const basket = ["D"]
+    // Act
+    const result = getPrices(basket)
+    // Assert
+    expect(result).toBe(15)
+  })
 
   test("given basket 'A, B', return: 80", () => {
     // Arrange
@@ -44,12 +60,12 @@ describe("testing getPrices function", () => {
     // Assert
     expect(result).toBe(80)
   })
-//   test("given basket 'A, A, A', return discounted price: 130", () => {
-//     // Arrange
-//     const basket = ["A", "A", "A"]
-//     // Act
-//     const result = getPrices(basket)
-//     // Assert
-//     expect(result).toBe(130)
-//   })
+  //   test("given basket 'A, A, A', return discounted price: 130", () => {
+  //     // Arrange
+  //     const basket = ["A", "A", "A"]
+  //     // Act
+  //     const result = getPrices(basket)
+  //     // Assert
+  //     expect(result).toBe(130)
+  //   })
 })
