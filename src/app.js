@@ -1,4 +1,5 @@
 // 😱 blank canvas syndrome!!!
 export const getPrices = (basket) => {
-  return 0
+  if (basket.length === 0) return 0
+  return 50
 }
