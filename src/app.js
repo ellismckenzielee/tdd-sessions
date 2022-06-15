@@ -24,10 +24,14 @@ export const getPrices = (basket) => {
   }
   const discounts = {
     A: [3, 130],
+    B: [2, 45],
   }
   const numAdiscounts = Math.floor(itemTally["A"] / discounts["A"][0])
   const discountA = discounts["A"][0] * prices["A"] - discounts["A"][1]
   if (numAdiscounts) finalBasket -= numAdiscounts * discountA
+  const numBdiscounts = Math.floor(itemTally["B"] / discounts["B"][0])
+  const discountB = discounts["B"][0] * prices["B"] - discounts["B"][1]
+  if (numBdiscounts) finalBasket -= numBdiscounts * discountB
 
   // Now we have the total price
   // Create an object which contains the discount
