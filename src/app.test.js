@@ -28,12 +28,20 @@ describe("testing getPrices function", () => {
     expect(result).toBe(30)
   })
 
-  test("given item 'B', return: 30", () => {
+  test("given basket 'A, B', return: 80", () => {
     // Arrange
-    const basket = ["B"]
+    const basket = ["A", "B"]
     // Act
     const result = getPrices(basket)
     // Assert
-    expect(result).toBe(30)
+    expect(result).toBe(80)
+  })
+  test("given basket 'A, B', return: 80", () => {
+    // Arrange
+    const basket = ["A", "B"]
+    // Act
+    const result = getPrices(basket)
+    // Assert
+    expect(result).toBe(80)
   })
 })

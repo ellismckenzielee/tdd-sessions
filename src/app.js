@@ -5,5 +5,12 @@ export const getPrices = (basket) => {
     A: 50,
     B: 30,
   }
-  return prices[basket[0]]
+
+  let finalBasket = 0
+
+  for (const item of basket) {
+    finalBasket += prices[item]
+  }
+
+  return finalBasket
 }
