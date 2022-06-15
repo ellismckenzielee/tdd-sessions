@@ -92,4 +92,12 @@ describe("testing getPrices function", () => {
     // Assert
     expect(result).toBe(175)
   })
+  test("given basket 'A, A, A, B, B, C', return discounted price: ", () => {
+    // Arrange
+    const basket = ["A", "A", "A", "B", "B", "C"]
+    // Act
+    const result = getPrices(basket)
+    // Assert
+    expect(result).toBe(195)
+  })
 })
